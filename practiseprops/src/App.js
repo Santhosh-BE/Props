@@ -1,23 +1,24 @@
-import logo from './logo.svg';
 import './App.css';
+import Employee from './Components/Employee';
 
 function App() {
+  const EmployeeInfo=[
+    {name:"santhosh",age:25},
+    {name:"vijay",age:26},
+    {name:"karthi",age:27},
+    {name:"jega",age:28},
+    {name:"gandhi",age:29}
+  ]
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Employee Details</h1>
+      {/* <Employee name="santhosh" age="25"/> */}
+      {
+        EmployeeInfo.map(every=>{
+          const {name,age}=every;
+          return(<Employee name={name} age={age}/>)}
+          )
+      }
     </div>
   );
 }
