@@ -12,13 +12,29 @@ function App() {
   return (
     <div className="App">
       <h1>Employee Details</h1>
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Age</th>
+          </tr>
+        </thead>
+      <tbody>
       {/* <Employee name="santhosh" age="25"/> */}
       {
         EmployeeInfo.map(every=>{
           const {name,age}=every;
-          return(<Employee name={name} age={age}/>)}
+          return(
+            <tr>
+         <td> <Employee name={name}/></td>
+         <td> <Employee age={age}/></td>
+         </tr>
+         )
+        }
           )
       }
+      </tbody>
+      </table>
     </div>
   );
 }

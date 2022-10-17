@@ -3,8 +3,8 @@ import React from 'react';
 const Employee = ({name,age}) => {
     return (
         <div>
-            <p>Name:{name}</p>
-            <p>Age:{age}</p>
+            <p>{name}</p>
+            <p>{age}</p>
         </div>
     )
 }
